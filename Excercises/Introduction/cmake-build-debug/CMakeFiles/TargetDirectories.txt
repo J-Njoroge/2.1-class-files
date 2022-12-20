@@ -1,0 +1,3 @@
+D:/Jenny/OOP 1/Excercises/Introduction/cmake-build-debug/CMakeFiles/Introduction.dir
+D:/Jenny/OOP 1/Excercises/Introduction/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Jenny/OOP 1/Excercises/Introduction/cmake-build-debug/CMakeFiles/rebuild_cache.dir

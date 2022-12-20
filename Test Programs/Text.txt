@@ -1,0 +1,65 @@
+Write a (rectangle) C++ program using the concept of classes to illustrate the following
+concept in Object Oriented programming. Indicate with comments where each of
+these concepts/techniques is used in your program.
+a) Inheritance.
+b) Overloading.
+c) Overriding.
+d) Encapsulation.
+e) Constructors (Including default constructors)
+f) Destructor.
+
+#include <iostream>
+
+// Class definition for Base
+class Base {
+  // Data members
+  private:
+    int data1;
+    
+  // Member functions
+  public:
+    // Constructor with default argument
+    Base(int d1 = 0) {
+        data1 = d1;
+    }
+    
+    // Encapsulated function
+    int getData1() {
+        return data1;
+    }
+};
+
+// Derived class inheriting from base
+class Derived : public Base {
+  // Data members
+  private:
+    int data2;
+    
+  // Member functions
+  public:
+    // Constructor with default argument
+    Derived(int d1 = 0, int d2 = 0) : Base(d1) {
+        data2 = d2;
+    }
+    
+    // Overloading the getData1() function
+    int getData1() {
+        return (data2 - Base::getData1());
+    }
+    
+    // Destructor
+    ~Derived() {
+        std::cout << "Destructor called for Derived class" << std::endl;
+    }
+};
+
+// Main function to test the above
+int main() {
+    // Creating a Derived class object
+    Derived d(5, 10);
+    
+    // Overriding the getData1() function from Base class
+    std::cout << "Difference between data1 and data2: " << d.getData1() << std::endl;
+    
+    return 0;
+}
